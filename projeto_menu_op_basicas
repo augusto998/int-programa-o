@@ -1,0 +1,21 @@
+#mostrar menu ;
+#quatro op basicas de matematica (par e impar,numero primo e fatorial );
+#interaçao do usuario pra escolher 2 numeros int;
+#finalizar operação usuario deve digitar enter
+par=1
+impar=2
+num_primo=3
+fatorial=4
+
+print("----*** Menu op basicas ***----")
+print("escolha a operação desejada das disponiveis abaixo")
+print("1-verificação de par" )
+print("2-verificação de ímpar" )
+print("3-calculo de numero primo")
+print("4-fatorial do numero escolhido")
+print("-digite o numero anterior a operação desejada e digite enter-")
+seletor_menu=int(input("digite o numero:"))
+if seletor_menu == par :
+    par1=int(input("digite o numero para a operação:"))
+if par1>0 :
+    print("o resultado da operação é :",par1%2==0)
