@@ -6,16 +6,28 @@ par=1
 impar=2
 num_primo=3
 fatorial=4
-
+#
 print("----*** Menu op basicas ***----")
+print("____________________________________")
 print("escolha a operação desejada das disponiveis abaixo")
 print("1-verificação de par" )
 print("2-verificação de ímpar" )
 print("3-calculo de numero primo")
 print("4-fatorial do numero escolhido")
 print("-digite o numero anterior a operação desejada e digite enter-")
+print("para sair digite 7")
 seletor_menu=int(input("digite o numero:"))
+#sair
+if seletor_menu == 7:
+    print("o programa esta se encerrando")
+#par
 if seletor_menu == par :
     par1=int(input("digite o numero para a operação:"))
-if par1>0 :
-    print("o resultado da operação é :",par1%2==0)
+if par1%2==0 :
+    print("o numero da operação é par")
+else:
+    print("o numero nao é par")
+#impar 
+if seletor_menu == impar :
+    impar1=int(input("digite o numero para a op.:"))
+if impar1 in range (1,) %1,impar1== 
