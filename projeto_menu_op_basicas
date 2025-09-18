@@ -1,6 +1,6 @@
-#mostrar menu ;
-#quatro op basicas de matematica (par e impar,numero primo e fatorial );
-#interaçao do usuario pra escolher 2 numeros int;
+#mostrar menu 
+#quatro op basicas de matematica (par e impar,numero primo e fatorial )
+#interaçao do usuario pra escolher 2 numeros int
 #finalizar operação usuario deve digitar enter
 par=1
 impar=2
@@ -9,8 +9,12 @@ fatorial=4
 par1=0
 impar1=0
 seletor_menu=0
-voltar_aomenu=""
-#menu
+voltar_aomenu="voltar" 
+soma=5
+subtração=6
+divisão=7
+sair=""
+#menu 
 print("----*** Menu op basicas ***----")
 print("____________________________________")
 print("escolha a operação desejada das disponiveis abaixo")
@@ -18,13 +22,30 @@ print("1-verificação de par" )
 print("2-verificação de ímpar" )
 print("3-calculo de numero primo")
 print("4-fatorial do numero escolhido")
+print("5-soma")
+print("6-subtração")
+print("7-divisão")
 print("-digite o numero anterior a operação desejada e digite enter-")
-print("para sair digite 7")
+print("para sair digite 'sair'")
 seletor_menu=int(input("digite o numero da operação desejada:"))
 #sair
-if seletor_menu ==7:
+if seletor_menu =="sair":
     print("o programa esta se encerrando")
-    
+#soma
+if seletor_menu == soma:
+    num1soma=int(input("digite o primeiro numero para a soma:"))
+    num2soma=int(input("digite o segundo numero para soma:"))
+    print("a soma desses dois numeros resulta em:",num1soma+num2soma)
+#divisão
+if seletor_menu== divisão:
+    div1=int(input("digite o primeiro numero para a divisão:"))
+    div2=int(input("digite o segundo numero para a divisão:"))
+    print("o resultado da divisão desses dois numeros é:",div1/div2)
+#subtração
+if seletor_menu==subtração:
+    num1sub=int(input("digite o primeiro numero para subtração:"))
+    num2sub=int(input("digite o segundo numero para subtração:"))
+    print("a subtração desses dois numero é:",num1sub-num2sub)
 #par
 if seletor_menu == par :
     par1=int(input("digite o numero para a operação:"))
@@ -56,8 +77,9 @@ if seletor_menu == num_primo :
     else :
         print("o numero não é primo")
 #
-voltar_aomenu=input("digite 'voltar' para voltar ao menu:")
-while voltar_aomenu == "voltar":
+voltar_aomenu=input("aperte enter para voltar")
+while sair != "sair":
+    #menu
     print("----*** Menu op basicas ***----")
     print("____________________________________")
     print("escolha a operação desejada das disponiveis abaixo")
@@ -65,12 +87,30 @@ while voltar_aomenu == "voltar":
     print("2-verificação de ímpar" )
     print("3-calculo de numero primo")
     print("4-fatorial do numero escolhido")
+    print("5-soma")
+    print("6-subtração")
+    print("7-divisão")
     print("-digite o numero anterior a operação desejada e digite enter-")
-    print("para sair digite 7")
+    print("para sair digite 'sair'")
     seletor_menu=int(input("digite o numero da operação desejada:"))
     #sair
-    if seletor_menu ==7:
-     print("o programa esta se encerrando")
+    if seletor_menu =='sair':
+        print("o programa esta se encerrando")
+     #soma
+    if seletor_menu == soma:
+        num1soma=int(input("digite o primeiro numero para a soma:"))
+        num2soma=int(input("digite o segundo numero para soma:"))
+        print("a soma desses dois numeros resulta em:",num1soma+num2soma)
+    #subtração
+    if seletor_menu==subtração:
+        num1sub=int(input("digite o primeiro numero para subtração:"))
+        num2sub=int(input("digite o segundo numero para subtração:"))
+        print("a subtração desses dois numero é:",num1sub-num2sub)
+    #divisão
+    if seletor_menu== divisão:
+        div1=int(input("digite o primeiro numero para a divisão:"))
+        div2=int(input("digite o segundo numero para a divisão:"))
+        print("o resultado da divisão desses dois numeros é:",div1/div2)
     #par
     if seletor_menu == par :
         par1=int(input("digite o numero para a operação:"))
@@ -101,5 +141,3 @@ while voltar_aomenu == "voltar":
             print("o numero é primo")
         else :
             print("o numero não é primo")
-    #
-    voltar_aomenu=input("digite 'voltar' para voltar ao menu:")
