@@ -1,0 +1,52 @@
+print("--- Robo Agricola ---")
+
+print("a bateria deve ser um numero inteiro de 0-100")
+print("a temperatura deve estar em celsius (numero inteiro ou real)")
+print("a umidade deve ser um numero inteiro de 0-100")
+
+bateria = int(input("digite a porcentagem da bateria"))
+temp = int(input("digite a temperatura"))
+usolo = int(input("digite a umidade do solo"))
+
+#checagem bateria
+if bateria < 20 :
+    print ("Bateria muito baixa! Retorne imediatamente para a base.")
+if bateria >= 20:
+    if bateria < 50 :
+        print ("Atenção: bateria em nível moderado.")
+if bateria >= 50 :
+    print ("Bateria suficiente para operação.")
+
+#checagem temp
+if temp > 40 :
+    print ("Temperatura crítica! Operação suspensa.")
+if temp < 5 :
+    print ("Frio extremo! Modo de economia ativado.")
+
+#checagem umidade
+if usolo < 30 :
+    print("Solo muito seco. Recomendado iniciar irrigação.")
+if usolo > 80 :
+    print("Solo encharcado! Suspenda irrigação imediatamente.")
+
+#modos
+
+
+
+modo = input("digite o modo de op desejado")
+if modo == "plantio" :
+    print("iniciando plantio")
+if modo == "colheita" :
+    print("iniciando colheita")
+if modo == "irrigacao" :
+    print("iniciando irrigação")
+
+#execução
+if bateria >= 50 :
+    if temp > 10 :
+        if temp < 35 :
+            if usolo > 30 :
+                if usolo <80 :
+                    print("Robo autorizado a iniciar operação")
+                else : 
+                    print("Operação negada! Verifique as condições do ambiente.")
